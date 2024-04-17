@@ -1,0 +1,16 @@
+<div class="container mt-5">
+  <!-- Pipe -->
+  <!-- Built-in Pipes -->
+  <!-- Custom Pipe -->
+  <p>{{ today | date : "dd-MM-yyyy hh:mm" }}</p>
+  <p>{{ 300 | currency : "₺" }}</p>
+
+  <!-- Directive -->
+  <input class="form-control" placeholder="Search" [(ngModel)]="searchKey" />
+  <ul *ngIf="todoList.length > 0">
+    <li *ngFor="let item of todoList | filterTodolist : searchKey">
+      {{ item.title }}
+    </li>
+  </ul>
+  <p *ngIf="todoList.length <= 0">Yükleniyor...</p>
+</div>

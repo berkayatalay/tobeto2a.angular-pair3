@@ -1,0 +1,52 @@
+<div class="container mt-5">
+    <h3>Ürün Kayıt</h3>
+    <form [formGroup]="itemaddForm" (submit)="submit()">
+      <div class="mb-3">
+        <label class="form-label">Başlık</label>
+        <input formControlName="name" type="text" class="form-control" />
+      </div>
+      <div class="mb-3">
+          <label class="form-label">Ürün Tipi</label>
+          <input formControlName="type" type="text" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Kategori</label>
+        <input formControlName="category" type="text" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Tarz</label>
+        <input formControlName="genre" type="text" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Yayımlanma Tarihi</label>
+        <input formControlName="publicationDate" type="text" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Sayfa Sayısı</label>
+        <input formControlName="totalPages" type="number" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Dil</label>
+        <input formControlName="language" type="text" class="form-control" />
+      </div>
+      <!--   <div class="mb-3">
+        <label class="form-label">Ürün Almaya Müsait Mi?</label>
+        <input formControlName="isAvailable" type="text" class="form-control" />
+      </div>   -->
+      <div class="mb-3">
+        <label class="form-label">Yayıncı ID</label>
+        <input formControlName="publisherId" type="text" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Lokasyon ID</label>
+        <input formControlName="locationId" type="text" class="form-control" />
+      </div>
+      <button
+        type="submit"
+        class="btn btn-primary" (click)="submit()"
+      >
+        Ekle
+      </button>
+    </form>
+  </div>
+  
